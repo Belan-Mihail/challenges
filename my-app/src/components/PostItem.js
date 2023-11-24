@@ -4,10 +4,10 @@ import css from './css/PostItem.module.css'
 function PostItem(props) {
   return (
     <div>
-      {props.savedPosts.map(post => {
+      {props.posts.map(post => {
                 const { name, title, description, image } = post;
                 return (
-                  <div className={css.SearchItem}>
+                  <div className={css.SearchItem} key={title}>
                   <p>{title}</p>
                     <p>{name}</p>
                     <img src={image}></img>
