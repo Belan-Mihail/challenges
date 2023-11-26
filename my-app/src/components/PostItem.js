@@ -4,7 +4,7 @@ import css from './css/PostItem.module.css'
 function PostItem(props) {
   return (
     <div>
-      {props.posts.map(post => {
+      {props.fetchedPosts.map(post => {
                 const { name, title, description, image } = post;
                 return (
                   <div className={css.SearchItem} key={title}>
